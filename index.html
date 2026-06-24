@@ -1,222 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsha Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Harsha Kumar | Assistant Professor</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
 
-        body{
-            background:#f4f6f9;
-            color:#333;
-        }
+body{
+    background:#f4f7fc;
+    color:#333;
+    line-height:1.6;
+}
 
-        header{
-            background:#1e3a8a;
-            color:white;
-            padding:20px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+header{
+    background:#0f172a;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            font-weight:bold;
-        }
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
 
-        .hero{
-            height:90vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:linear-gradient(135deg,#2563eb,#3b82f6);
-            color:white;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+}
 
-        .hero-content h1{
-            font-size:3rem;
-            margin-bottom:15px;
-        }
+nav a:hover{
+    color:#38bdf8;
+}
 
-        .hero-content p{
-            font-size:1.2rem;
-            margin-bottom:20px;
-        }
+.hero{
+    min-height:90vh;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
 
-        .btn{
-            display:inline-block;
-            background:white;
-            color:#2563eb;
-            padding:12px 25px;
-            border-radius:25px;
-            text-decoration:none;
-            font-weight:bold;
-        }
+.hero h1{
+    font-size:55px;
+}
 
-        section{
-            padding:60px 10%;
-        }
+.hero h3{
+    margin-top:10px;
+    font-weight:400;
+}
 
-        h2{
-            text-align:center;
-            margin-bottom:30px;
-            color:#1e3a8a;
-        }
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+    max-width:800px;
+}
 
-        .about{
-            text-align:center;
-            line-height:1.8;
-        }
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
 
-        .skills{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-            gap:20px;
-        }
+section{
+    padding:70px 10%;
+}
 
-        .skill-card{
-            background:white;
-            padding:20px;
-            text-align:center;
-            border-radius:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#1e3a8a;
+    font-size:34px;
+}
 
-        .projects{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:25px;
-        }
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
 
-        .project-card{
-            background:white;
-            border-radius:10px;
-            overflow:hidden;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
-        }
+.about{
+    text-align:center;
+    font-size:18px;
+}
 
-        .project-card img{
-            width:100%;
-            height:180px;
-            object-fit:cover;
-        }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
 
-        .project-content{
-            padding:15px;
-        }
+.item{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-        .contact{
-            text-align:center;
-        }
+.timeline{
+    display:grid;
+    gap:20px;
+}
 
-        footer{
-            background:#1e3a8a;
-            color:white;
-            text-align:center;
-            padding:15px;
-        }
-    </style>
+.timeline .card{
+    border-left:5px solid #2563eb;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:38px;
+    }
+
+    nav{
+        display:none;
+    }
+}
+</style>
+
 </head>
 <body>
 
-    <header>
-        <h2>Harsha</h2>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">Dr. Harsha Kumar</div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm Harsha</h1>
-            <p>Computer Science Student | Web Developer | AI Enthusiast</p>
-            <a href="#projects" class="btn">View My Work</a>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div>
+        <h1>Dr. Harsha Kumar</h1>
+
+        <h3>UGC-NET Qualified Assistant Professor</h3>
+
+        <p>
+            Passionate educator, researcher and mentor with expertise in
+            Computer Science, Artificial Intelligence, Data Science,
+            Cyber Security and Software Engineering.
+        </p>
+
+        <a href="#about" class="btn">Explore Profile</a>
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card about">
+        <p>
+            I am a UGC-NET Qualified Assistant Professor in Computer Science
+            with extensive teaching, research and mentoring experience.
+            My academic interests include Artificial Intelligence,
+            Machine Learning, Data Science, Cloud Computing,
+            Cyber Security and Software Development.
+            I am dedicated to academic excellence, innovative teaching
+            methodologies and guiding students towards successful careers.
+        </p>
+    </div>
+
+</section>
+
+<section id="education">
+
+    <h2 class="section-title">Academic Qualifications</h2>
+
+    <div class="grid">
+
+        <div class="item">Ph.D. in Computer Science</div>
+
+        <div class="item">UGC-NET Qualified</div>
+
+        <div class="item">M.Tech (Computer Science)</div>
+
+        <div class="item">M.Sc (Computer Science)</div>
+
+        <div class="item">B.Sc (Computer Science)</div>
+
+    </div>
+
+</section>
+
+<section id="subjects">
+
+    <h2 class="section-title">16 Subjects Taught</h2>
+
+    <div class="grid">
+
+        <div class="item">Programming in C</div>
+        <div class="item">Data Structures</div>
+        <div class="item">Java Programming</div>
+        <div class="item">Python Programming</div>
+        <div class="item">Database Management Systems</div>
+        <div class="item">Operating Systems</div>
+        <div class="item">Computer Networks</div>
+        <div class="item">Software Engineering</div>
+        <div class="item">Web Technologies</div>
+        <div class="item">Artificial Intelligence</div>
+        <div class="item">Machine Learning</div>
+        <div class="item">Data Mining</div>
+        <div class="item">Cyber Security</div>
+        <div class="item">Cloud Computing</div>
+        <div class="item">Data Science</div>
+        <div class="item">Computer Organization</div>
+
+    </div>
+
+</section>
+
+<section id="research">
+
+    <h2 class="section-title">Research Interests</h2>
+
+    <div class="grid">
+
+        <div class="item">Artificial Intelligence</div>
+        <div class="item">Machine Learning</div>
+        <div class="item">Deep Learning</div>
+        <div class="item">Data Analytics</div>
+        <div class="item">Cyber Security</div>
+        <div class="item">Cloud Computing</div>
+        <div class="item">Internet of Things</div>
+        <div class="item">Educational Technology</div>
+
+    </div>
+
+</section>
+
+<section id="experience">
+
+    <h2 class="section-title">Academic Experience</h2>
+
+    <div class="timeline">
+
+        <div class="card">
+            <h3>Assistant Professor</h3>
+            <p>Department of Computer Science</p>
+            <p>Teaching UG & PG Courses, Research Guidance and Academic Administration.</p>
         </div>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about">
-            <p>
-                I am a passionate Computer Science student interested in
-                Full Stack Development, Artificial Intelligence, and Cybersecurity.
-                I enjoy building innovative software solutions and learning new technologies.
-            </p>
+        <div class="card">
+            <h3>Research Mentor</h3>
+            <p>Guided numerous student projects in AI, ML and Web Technologies.</p>
         </div>
-    </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Flask</div>
-            <div class="skill-card">MySQL</div>
+        <div class="card">
+            <h3>Academic Coordinator</h3>
+            <p>Organized workshops, FDPs, seminars and technical events.</p>
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    </div>
 
-        <div class="projects">
+</section>
 
-            <div class="project-card">
-                <img src="https://picsum.photos/400/250?random=1" alt="">
-                <div class="project-content">
-                    <h3>Plant Disease Detection</h3>
-                    <p>Deep learning-based system to identify plant diseases using image classification.</p>
-                </div>
-            </div>
+<section id="publications">
 
-            <div class="project-card">
-                <img src="https://picsum.photos/400/250?random=2" alt="">
-                <div class="project-content">
-                    <h3>Biometric MFA System</h3>
-                    <p>Multi-factor authentication using face recognition and OTP verification.</p>
-                </div>
-            </div>
+    <h2 class="section-title">Publications & Achievements</h2>
 
-            <div class="project-card">
-                <img src="https://picsum.photos/400/250?random=3" alt="">
-                <div class="project-content">
-                    <h3>Student Management System</h3>
-                    <p>Web application for managing student records and academic data.</p>
-                </div>
-            </div>
+    <div class="grid">
 
+        <div class="item">
+            <h3>Research Papers</h3>
+            <p>Published papers in reputed journals and conferences.</p>
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <div class="contact">
-            <p>Email: harsha@example.com</p>
-            <p>Phone: +91 9876543210</p>
-            <p>LinkedIn: linkedin.com/in/harsha</p>
-            <p>GitHub: github.com/harsha</p>
+        <div class="item">
+            <h3>Conference Presentations</h3>
+            <p>Presented research at national and international conferences.</p>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Harsha. All Rights Reserved.</p>
-    </footer>
+        <div class="item">
+            <h3>Faculty Development Programs</h3>
+            <p>Participated in FDPs, workshops and seminars.</p>
+        </div>
+
+        <div class="item">
+            <h3>Student Mentorship</h3>
+            <p>Guided UG and PG student research projects.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Information</h2>
+
+    <div class="card contact">
+
+        <p><strong>Name:</strong> Dr. Harsha Kumar</p>
+
+        <p><strong>Designation:</strong> Assistant Professor</p>
+
+        <p><strong>Department:</strong> Computer Science</p>
+
+        <p><strong>Email:</strong> yourmail@example.com</p>
+
+        <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+
+        <p><strong>Google Scholar:</strong> Add Your Link</p>
+
+        <p><strong>ResearchGate:</strong> Add Your Link</p>
+
+        <p><strong>ORCID:</strong> Add Your Link</p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dr. Harsha Kumar | Assistant Professor Portfolio</p>
+</footer>
 
 </body>
 </html>
